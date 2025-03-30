@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Tayade - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {
+                e.preventDefault();
+            }
+        };
+    </script>
+     <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="xyz.jpeg" alt="Profile Picture" class="profile-pic">
+        <div class="header-content">
+            <h1>ROHAN TAYADE</h1>
+            <p class="tagline">Computer Engineering Student & Developer</p>
+        </div>
+    </header>
+    
+   <!-- Horizontal Navbar -->
+   <nav>
+    <ul class="horizontal-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hey there! I'm a Computer Engineering student passionate about programming and web development. I love solving problems and building things that make a difference.</p>
+            <p>When I'm not coding, you can find me studying for exams, contributing to open source, or debugging my latest project at 2 AM.</p>
+            <div class="code-block">
+                // Typical student life<br>
+                while(alive) {<br>
+                &nbsp;&nbsp;eat();<br>
+                &nbsp;&nbsp;code();<br>
+                &nbsp;&nbsp;sleep();<br>
+                &nbsp;&nbsp;repeat();<br>
+                }
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills">
+                <div class="skill">HTML5</div>
+                <div class="skill">CSS3</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Responsive Design</div>
+                <div class="skill">UI/UX</div>
+                <div class="skill">Git</div>
+                <div class="skill">Problem Solving</div>
+                <div class="skill">Debugging</div>
+                <div class="skill">Late Night Coding</div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Easy Japanese Learning</h3>
+                    <p>An interactive web application for learning Japanese vocabulary and phrases. Features categorized lessons, pronunciation guides, and progress tracking.</p>
+                    <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript, Responsive Design</p>
+                    <a href="https://easyjapanese.tiiny.site/index.html" target="_blank" class="project-link">View Project →</a>
+                </div>
+                
+                <div class="project">
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive personal portfolio website built with pure HTML, CSS showcasing my skills and projects.</p>
+                    <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="certifications">
+                <div class="certificate">
+                    <div class="certificate-content">
+                        <h3>Programming in C</h3>
+                        <p><strong>Issued by:</strong> Infosys Springboard</p>
+                        <p><strong>Date:</strong> March 17, 2025</p>
+                        <p>Comprehensive C programming certification covering fundamental concepts, data structures, and algorithm implementation.</p>
+                    </div>
+                    <img src="Screenshot 2025-03-25 094848.jpg" alt="Infosys C Programming Certification">
+                </div>
+                
+                <div class="certificate">
+                    <div class="certificate-content">
+                        <h3>Introduction to Python</h3>
+                        <p><strong>Issued by:</strong> DataCamp</p>
+                        <p><strong>Date:</strong> November 8, 2024</p>
+                        <p>Fundamentals of Python programming including syntax, data structures, and basic algorithms.</p>
+                    </div>
+                    <img src="1737782306229.jpg" alt="DataCamp Python Certification">
+                </div>
+                
+                <div class="certificate">
+                    <div class="certificate-content">
+                        <h3>Advanced Programming Concepts</h3>
+                        <p><strong>Issued by:</strong> University of Helsinki</p>
+                        <p><strong>Date:</strong> June 20, 2024</p>
+                        <p>2 ECTS credit course covering advanced programming paradigms and software development methodologies.</p>
+                    </div>
+                    <img src="1729782720834.jpg" alt="University of Helsinki Certification">
+                </div>
+                
+                <div class="certificate">
+                    <div class="certificate-content">
+                        <h3>Introduction to Front-End Development</h3>
+                        <p><strong>Issued by:</strong> Meta via Coursera</p>
+                        <p><strong>Date:</strong> July 6, 2024</p>
+                        <p>Professional certificate covering HTML, CSS, JavaScript, and responsive design principles.</p>
+                    </div>
+                    <img src="CERTIFICATE_LANDING_PAGE~6PKWGPUFMB5U.jpeg" alt="Meta Front-End Certification">
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>Want to collaborate or just say hi? Reach out!</p>
+            <div class="contact-links">
+                <a href="mailto:rohantayade09@gmail.com">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    rohantayade09@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/rohan-tayade-378403314/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    LinkedIn Profile
+                </a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>Built with ❤️ and too much coffee</p>
+        <p>&copy; 2025 ROHAN TAYADE - Student Developer</p>
+    </footer>
+</body>
+</html>
