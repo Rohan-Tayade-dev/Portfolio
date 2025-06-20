@@ -1,0 +1,335 @@
+:root {
+    --black: #000000;
+    --dark: #111111;
+    --light: #FFFFFF;
+    --accent: #FFD700;
+    --accent-dark: #FFC000;
+    --gray: #888888;
+    --card-bg: rgba(20, 20, 20, 0.9);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--black);
+    color: var(--light);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+header, section, footer {
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background: var(--accent);
+}
+
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    line-height: 1.3;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--light);
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+a {
+    color: var(--light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    margin-bottom: 2rem;
+    box-shadow: 0 0 0 8px rgba(255, 215, 0, 0.2);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--accent);
+}
+
+nav a {
+    margin: 0 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    color: var(--gray);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+nav a.active {
+    color: var(--accent);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.skills, .projects, .certifications, .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill, .project, .certificate {
+    background: var(--card-bg);
+    padding: 2rem;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    transition: all 0.3s ease;
+}
+
+.skill:hover, .project:hover, .certificate:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+}
+
+.skill {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    color: var(--accent);
+    font-weight: 600;
+    gap: 0.8rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.project-link:hover {
+    color: var(--accent-dark);
+}
+
+.certificate img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.certificate:hover img {
+    border-color: var(--accent);
+}
+
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--black);
+    background: var(--accent);
+    padding: 1.2rem 2rem;
+    border-radius: 8px;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+    background: var(--accent-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.contact-links a i {
+    font-size: 1.3rem;
+}
+
+.code-block {
+    background: var(--dark);
+    padding: 2rem;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    margin: 2rem 0;
+    border-left: 4px solid var(--accent);
+    position: relative;
+}
+
+.code-block::before {
+    content: 'CODE';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2rem 1rem;
+    background: var(--accent);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: var(--dark);
+    border-top: 2px solid var(--accent);
+}
+
+/* Animated background elements */
+.bg-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-element {
+    position: absolute;
+    border: 1px solid rgba(255, 215, 0, 0.05);
+    border-radius: 50%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header, section, footer {
+        padding: 2rem 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    nav {
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    nav a {
+        margin: 0 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .skill, .project, .certificate {
+        min-width: 100%;
+    }
+    
+    .contact-links a {
+        width: 100%;
+        margin-right: 0;
+        justify-content: center;
+    }
+}
